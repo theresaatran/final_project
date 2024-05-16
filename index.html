@@ -9,9 +9,13 @@
 	<link rel="stylesheet" href="css/font.css">
 	<link rel="stylesheet" href="css/variables.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/swiper-bundle.css">
+	<script type="module" src="js/register.js" defer></script>
 </head>
   
 <body>
+	
+
 	<!-- ==================== HEADER ==================== -->
 	<header class="header" id="header">
 		<nav class="nav container"> 
@@ -19,10 +23,6 @@
 
 			<div class="nav__menu" id="nav-menu">
 				<ul class="nav__list">
-					<li>
-						<a href="#" class="nav__link">Home</a>
-					</li>
-
 					<li>
 						<a href="#" class="nav__link">Projects</a>
 					</li>
@@ -37,6 +37,9 @@
 
 					<li>
 						<a href="#" class="nav__link">Contact</a>
+					</li>
+					<li>
+						<a href="#" class="nav__link"><i class="ri-user-line"></i></a>
 					</li>
 				</ul>
 
@@ -58,61 +61,77 @@
 	 <main class="main">
 		<!-- ==================== HOME ==================== -->
 		<section class="home">
-			<div class="home__swiper">
-				<div>
-					<article class="home__article">
+			<div class="home__swiper swiper">
+				<div class="swiper-wrapper">
+					<article class="home__article swiper-slide ">
 						<div class="home__data container">
-							<h3 class="home__subtitle">Architecture</h3>
-							<h1 class="home__title">Relaxing Steep <br> Lake House </h1>
+							<h3 class="home__subtitle" data-swiper-parallax="500">Architecture</h3>
+							<h1 class="home__title" data-swiper-parallax="400">Relaxing Steep <br> Lake House </h1>
+	
+							<!-- Registration/Login Form -->
+						<div id="form-container" class="registration-form">
+							<h3>Create Account</h3>
+							<label for="email">Email</label>
+							<input type="email" id="email" placeholder="Enter your email" required>
+							
+							<label for="password">Password</label>
+							<input type="password" id="password" placeholder="Enter your password" required>
 
-							<a href="#" class="home__button">
-								See Project <i class="ri-arrow-right-s-line"></i>
-							</a>
+							<button id="register-btn">Register Now</button>
+							<p class="create-account">Already have an account? <a href="#" id="toggle-form">Log in</a></p>
 						</div>
 
-						<img src="assets/img/home-1.jpg" alt="image" class="home__img">
+						<!-- Logout -->
+						<div class="profile-container" id="profile-container" style="display: none;">
+							<p id="user-email"></p>
+							<button id="logout-btn">Logout</button>
+						</div>
+						
+						
+
+						<img src="assets/img/home-1.jpg" alt="image" class="home__img"data-swiper-parallax="-300">
 						<div class="home__shadow"></div>
 					</article>
 
-					<article class="home__article">
+					<article class="home__article swiper-slide">
 						<div class="home__data container">
-							<h3 class="home__subtitle">Architecture</h3>
-							<h1 class="home__title">Luxury House <br> In The Forest </h1>
+							<h3 class="home__subtitle"data-swiper-parallax="500">Architecture</h3>
+							<h1 class="home__title"data-swiper-parallax="400">Luxury House <br> In The Forest </h1>
 
-							<a href="#" class="home__button">
+							<a href="#" class="home__button"data-swiper-parallax="300">
 								See Project <i class="ri-arrow-right-s-line"></i>
 							</a>
 						</div>
 
-						<img src="assets/img/home-2.jpg" alt="image" class="home__img">
+						<img src="assets/img/home-2.jpg" alt="image" class="home__img"data-swiper-parallax="-300">
 						<div class="home__shadow"></div>
 					</article>
 
-					<article class="home__article">
+					<article class="home__article swiper-slide ">
 						<div class="home__data container">
-							<h3 class="home__subtitle">Architecture</h3>
-							<h1 class="home__title">Modern House <br> On The Rocks</h1>
+							<h3 class="home__subtitle"data-swiper-parallax="500">Architecture</h3>
+							<h1 class="home__title"data-swiper-parallax="400">Modern House <br> On The Rocks</h1>
 
-							<a href="#" class="home__button">
+							<a href="#" class="home__button"data-swiper-parallax="300">
 								See Project <i class="ri-arrow-right-s-line"></i>
 							</a>
 						</div>
 
-						<img src="assets/img/home-3.jpg" alt="image" class="home__img">
+						<img src="assets/img/home-3.jpg" alt="image" class="home__img"data-swiper-parallax="-300">
 						<div class="home__shadow"></div>
 					</article>
 
-					<article class="home__article">
+					<article class="home__article swiper-slide ">
 						<div class="home__data container">
-							<h3 class="home__subtitle">Architecture</h3>
-							<h1 class="home__title">Luxury <br> Curved House</h1>
+							<h3 class="home__subtitle"data-swiper-parallax="500">Architecture</h3>
+							<h1 class="home__title"data-swiper-parallax="400">Luxury <br> Curved House</h1>
 
-							<a href="#" class="home__button">
+							<a href="#" class="home__button"data-swiper-parallax="300">
 								See Project <i class="ri-arrow-right-s-line"></i>
 							</a>
 						</div>
 
-						<img src="assets/img/home-4.jpg" alt="image" class="home__img">
+						<img src="assets/img/home-4.jpg" alt="image" class="home__img"data-swiper-parallax="-300">
 						<div class="home__shadow"></div>
 					</article>
 
@@ -120,21 +139,38 @@
  			</div>
 
 			<div class="home__content">
+				<div class="home__social">
+					<a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+						<i class="ri-facebook-circle-line"></i>
+					</a>
+
+					<a href="https://instagram.com/" target="_blank" class="home__social-link">
+						<i class="ri-instagram-line"></i>
+					</a>
+
+					<a href="https://twitter.com/" target="_blank" class="home__social-link">
+						<i class="ri-twitter-line"></i>
+					</a>
+				</div>
+
+				<div class="swiper-pagination"></div>
+
+				<div class="swiper-navigation">
+					<div class="swiper-button-prev"></div>
+
+					<div class="swiper-button-next"></div>
+				</div>
 
 			</div>
 		</section>
 	 </main>
-
+ 
 
 	 
 
-
-
-	 <!-- ==================== SWIPER JS ==================== -->
-
-	<script src=""></script>
-
-	 <!-- ==================== MAIN JS ==================== -->
+	 <!-- ==================== JS ==================== -->
+	 <script src="js/swiper-bundle.js"></script>
 	 <script src="js/app.js"></script>
+
 </body>
 </html> 
