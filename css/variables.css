@@ -22,6 +22,9 @@
 	--z-fixed: 100;
 }
 
+
+
+
 @media screen and (min-widht: 1150px) {
 	:root{
 		--biggest-font-size: 4rem;
