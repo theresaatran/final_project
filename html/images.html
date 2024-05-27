@@ -6,33 +6,29 @@
 	<title>Architecture website - projects </title>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-	<link rel="stylesheet" href="css/font.css">
-	<link rel="stylesheet" href="css/variables.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/swiper-bundle.css">
-	<script type="module" src="js/register.js" defer></script>
-	<script src="js/filter.js" defer></script>
+	<link rel="stylesheet" href="../css/font.css">
+	<link rel="stylesheet" href="../css/variables.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/swiper-bundle.css">
+	<script type="module" src="../js/register.js" defer></script>
+	<script src="../js/filter.js" defer></script>
 </head>
   
 <body>
 	<!-- ==================== HEADER ==================== -->
 	<header class="header" id="header">
 		<nav class="nav container"> 
-			<a href="index.html" class="nav__logo">Architecture</a>
+			<a href="../html/index.html" class="nav__logo">Architecture</a>
 
 			<div class="nav__menu" id="nav-menu">
 				<ul class="nav__list">
 
 					<li>
-						<a href="project.html" class="nav__link">Projects</a>
-					</li>
-					 
-					<li>
-						<a href="#" class="nav__link">News</a>
+						<a href="../html/project.html" class="nav__link">Projects</a>
 					</li>
 
 					<li>
-						<a href="#" class="nav__link">Find adress</a>
+						<a href="../html/images.html" class="nav__link">Images</a>
 					</li>
 
 					<li>
@@ -59,19 +55,20 @@
 		
 	<main class="project-main">
         <section class="hero">
-            <img src="assets/img/home-1.jpg" alt="Hero Image">
+            <img src="../assets/img/home-6.jpg" alt="Hero Image">
             <div class="hero-text">
                 <h2>Architecture images</h2>
                 <p>Search for architecture images and more!</p>
-                <div class="filter-search">
+                <div class="search">
                     <input type="text" id="search-bar" placeholder="Search articles...">
                     <button id="search-button">Search</button>
                 </div>
             </div>
         </section>
     </main>
+	<h2 class="gallery-title" id="gallery-title"></h2>
     <div class="gallery" id="gallery"></div>
 
-    <script src="js/address.js"></script>
+    <script src="../js/images.js"></script>
 </body>
 </html>

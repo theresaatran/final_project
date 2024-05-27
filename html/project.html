@@ -6,33 +6,29 @@
 	<title>Architecture website - projects </title>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-	<link rel="stylesheet" href="css/font.css">
-	<link rel="stylesheet" href="css/variables.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/swiper-bundle.css">
-	<script type="module" src="js/register.js" defer></script>
-	<script src="js/filter.js" defer></script>
+	<link rel="stylesheet" href="../css/font.css">
+	<link rel="stylesheet" href="../css/variables.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/swiper-bundle.css">
+	<script type="module" src="../js/register.js" defer></script>
+	<script src="../js/filter.js" defer></script>
 </head>
   
 <body>
 	<!-- ==================== HEADER ==================== -->
 	<header class="header" id="header">
 		<nav class="nav container"> 
-			<a href="index.html" class="nav__logo">Architecture</a>
+			<a href="../html/index.html" class="nav__logo">Architecture</a>
 
 			<div class="nav__menu" id="nav-menu">
 				<ul class="nav__list">
 
 					<li>
-						<a href="project.html" class="nav__link">Projects</a>
-					</li>
-					 
-					<li>
-						<a href="#" class="nav__link">News</a>
+						<a href="../html/project.html" class="nav__link">Projects</a>
 					</li>
 
 					<li>
-						<a href="adress.html" class="nav__link">Find address</a>
+						<a href="../html/images.html" class="nav__link">Images</a>
 					</li>
 
 					<li>
@@ -59,47 +55,59 @@
 		
 	<main class="project-main">
 		<section class="hero">
-			<img src="assets/img/home-1.jpg" alt="Hero Image">
+			<img src="../assets/img/home-5.jpg" alt="Hero Image">
 			<div class="hero-text">
 				<h2>Featured Architecture</h2>
 				<p>Latest trends and projects in the world of architecture.</p>
-			</div>
 
+				<div class="filter-section">
+					<label for="filter-date">Filter by recent projects</label>
+					<input type="date" id="filter-date">
+					<button id="filter-button">Filter</button>
+				</section>
+			</div>
+			
 		</section>
 			
 		<section class="articles">
 			<article class="article-item" data-category="luxury-house">
-				<img src="assets/img/home-2.jpg" alt="Article 1">
+				<p>June 06, 2022</p>
+				<img src="../assets/img/home-2.jpg" alt="Article 1">
 				<h3>Luxury House in the Forest</h3>
 				<p>In the forest</p>
 			</article>
 
 			<article class="article-item"  data-category="modern-house">
-				<img src="assets/img/home-3.jpg" alt="Article 2">
+				<p>April 09, 2024</p>
+				<img src="../assets/img/home-3.jpg" alt="Article 2">
 				<h3>Modern House on the Rocks</h3>
 				<p>Brief description of the second article.</p>
 			</article>
 
 			<article class="article-item"  data-category="curved-house">
-				<img src="assets/img/home-4.jpg" alt="Article 3">
+				<p>May 15, 2024</p>
+				<img src="../assets/img/home-4.jpg" alt="Article 3">
 				<h3>Curved house</h3>
 				<p>Brief description of the third article.</p>
 			</article>
 
 			<article class="article-item"  data-category="lake-house">
-				<img src="assets/img/home-1.jpg" alt="Article 1">
+				<p>December 21, 2023</p>
+				<img src="../assets/img/home-1.jpg" alt="Article 1">
 				<h3>Relaxing Steep Lake House</h3>
 				<p>Brief description of the first article.</p>
 			</article>
 				
 			<article class="article-item"  data-category="modern-house">
-				<img src="assets/img/home-3.jpg" alt="Article 2">
+				<p>February 15, 2019</p>
+				<img src="../assets/img/home-3.jpg" alt="Article 2">
 				<h3>Modern House on the Rocks</h3>
 				<p>Brief description of the second article.</p>
 			</article>
 
 			<article class="article-item"  data-category="curved-house">
-				<img src="assets/img/home-4.jpg" alt="Article 3">
+				<p>August 15, 2017</p>
+				<img src="../assets/img/home-4.jpg" alt="Article 3">
 				<h3>Curved house</h3>
 				<p>Brief description of the third article.</p>
 			</article>

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.getElementById('gallery');
     const searchBar = document.getElementById('search-bar');
     const sortButton = document.getElementById('search-button');
+    const galleryTitle = document.getElementById('gallery-title');
 
     async function fetchImages(query = 'architecture') {
         try {
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const data = await response.json();
             displayImages(data.results);
+            updateTitle(query);
         } catch (error) {
             console.error(error);
         }
@@ -25,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
             imgElement.alt = image.alt_description || 'Architecture Image';
             gallery.appendChild(imgElement);
         });
+    }
+
+    function updateTitle(query) {
+        galleryTitle.textContent = `Results for "${query}"`;
     }
 
     fetchImages();
