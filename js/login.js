@@ -35,12 +35,10 @@ const logoutButton = document.getElementById('logoutButton');
 // Check authentication state
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        // User is signed in
         loginContainer.style.display = 'none';
         createAccountContainer.style.display = 'none';
         loggedInMessage.style.display = 'block';
     } else {
-        // User is signed out
         loginContainer.style.display = 'block';
         createAccountContainer.style.display = 'none';
         loggedInMessage.style.display = 'none';
@@ -54,7 +52,6 @@ loginForm.addEventListener('submit', (e) => {
     const password = loginPassword.value;
     signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-            // Login successful
         })
         .catch((error) => {
             alert(error.message);
@@ -68,7 +65,6 @@ createAccountForm.addEventListener('submit', (e) => {
     const password = createPassword.value;
     createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
-            // Account creation successful
         })
         .catch((error) => {
             alert(error.message);
@@ -92,7 +88,6 @@ loginLink.addEventListener('click', (e) => {
 logoutButton.addEventListener('click', () => {
     signOut(auth)
         .then(() => {
-            // Sign-out successful
         })
         .catch((error) => {
             alert(error.message);

@@ -42,7 +42,6 @@
         profileIcon.classList.remove('ri-user-line');
         profileIcon.classList.add('ri-logout-box-r-line');
 
-        // Hide registration form
         document.querySelector('.registration-form').style.display = 'none';
     })
     .catch((error) => {
